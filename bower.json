@@ -1,0 +1,26 @@
+{
+  "name": "flo-campaign",
+  "description": "FLO campaing page",
+  "main": "index.js",
+  "authors": [
+    "Bo Skov Selbach"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.3",
+    "angular-route": "^1.5.3",
+    "angular-animate": "^1.5.3",
+    "jquery": "^2.2.3",
+    "bourbon": "^4.2.6",
+    "jquery-circle-progress": "^1.1.3"
+  }
+}

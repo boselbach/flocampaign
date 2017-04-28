@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>Falcon.io</title>
+
+    <link rel="stylesheet" href="/flo/assets/css/style.css">
+    <script src="/flo/components/jquery/dist/jquery.min.js"></script>
+    <script src="/flo/components/angular/angular.min.js"></script>
+    <script src="/flo/components/angular-route/angular-route.min.js"></script>
+    <script src="/flo/components/angular-animate/angular-animate.min.js"></script>
+    <script src="/flo/components/angular-animate/angular-animate.min.js"></script>
+    <script src="/flo/components/jquery-circle-progress/dist/circle-progress.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+</head>
+<body>
+    <div class="indicate"></div>
+    <nav class="main" ng-controller="navigationController">
+        <ul>
+            <li id="{{'menu-item-'+$index}}"ng-repeat="route in routes" ng-class="{'active': $index === isActive}" >
+                <div id="{{'progress-circle'+$index}}" class="progress-circle"></div>
+                <a ng-style="{'background-color': $index === isActive ? activeColor : 'inherit'};" href="#{{ route.slug }}">{{ route.name || route.view}}</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="main">
+        <div class="page {{ pageClass }}" ng-view>
+            <div ng-repeat="item in items" ng-switch="item.module">
+                <person ng-switch-when="person" options="{{ item.options }}"></person>
+                <sky ng-switch-when="sky"></sky>
+            </div>
+        </div>
+    </section>
+    <script src="/flo/assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<article>
+    <!-- <h1><strong>Discover</strong> new audiences</h1> -->
+    <h1><strong>Discover</strong> new audiences.</h1>
+    <div class="stage">
+        <div class="inner-stage zoomStart">
+            <person
+                type="{{ person.type }}"
+                class="{{ person.class }}"
+                delay="{{ person.delay }}"
+                x="{{ person.x }}"
+                z-index="{{ person.zIndex }}"
+                size="{{ person.size }}",
+                animate="{{ person.animate }}"
+                ng-repeat="person in persons"
+            />
+            <div circles></div>
+        </div>
+
+        <computer class="rightIn"></computer>
+    </div>
+
+
+</article>

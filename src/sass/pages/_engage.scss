@@ -1,0 +1,43 @@
+.engage {
+    background-color: #F0F3F5;
+
+    #cc2 {
+        -webkit-animation: engageFill 1s ease-in-out forwards;
+        animation: engageFill 1s ease-in-out forwards;
+
+        @keyframes engageFill {
+            to {
+                fill: #8F53A1;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 60px;
+        font-weight: 100;
+        font-family: "Open Sans";
+        position: absolute;
+        left:0;
+        right:0;
+        margin: auto;
+        top: 25%;
+        z-index: 1500;
+        -webkit-animation: discoverHeadline 1.5s ease-in-out forwards;
+        animation: discoverHeadline 1.5s ease-in-out forwards;
+
+        @keyframes discoverHeadline {
+            0% {
+                opacity: 0;
+                transform: scale(.4);
+            }
+            50% {
+                opacity: .5;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(1);
+            }
+        }
+    }
+}

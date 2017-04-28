@@ -1,0 +1,44 @@
+.attract {
+    // background: url('../images/bg1.jpg');
+    // background-size: cover;
+    background-color: #F0F3F5;
+
+    #cc1 {
+        -webkit-animation: attractFill 1s ease-in-out forwards;
+        animation: attractFill 1s ease-in-out forwards;
+
+        @keyframes attractFill {
+            to {
+                fill: #f7bf16;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 60px;
+        font-weight: 100;
+        font-family: "Open Sans";
+        position: absolute;
+        left:0;
+        right:0;
+        margin: auto;
+        top: 25%;
+        -webkit-animation: discoverHeadline 1.5s ease-in-out forwards;
+        animation: discoverHeadline 1.5s ease-in-out forwards;
+
+        @keyframes discoverHeadline {
+            0% {
+                opacity: 0;
+                transform: scale(.4);
+            }
+            50% {
+                opacity: .5;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(1);
+            }
+        }
+    }
+}

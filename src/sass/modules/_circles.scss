@@ -1,0 +1,38 @@
+#cc {
+    fill: #e2e5e8;
+}
+
+#cc1 {
+    fill: #c4ccd1;
+}
+
+#cc2 {
+    fill: #a7b2b9;
+}
+#cc3 {
+    fill: #8999a2;
+}
+#cc4 {
+    fill: #6c7f8b;
+}
+
+.circles {
+    position: fixed;
+    width: 100%;
+    top: 30%;
+    left: 0%;
+    right: -5%;
+    z-index: 11;
+
+    // &.zoom {
+    //     -webkit-animation: circlesZoom 1s ease forwards;
+    //     animation: circlesZoom 1s ease forwards;
+    // }
+}
+//
+// @keyframes circlesZoom {
+//     to {
+//         width: 180%;
+//         left: -65%;
+//     }
+// }

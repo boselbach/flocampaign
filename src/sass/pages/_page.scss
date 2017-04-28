@@ -1,0 +1,123 @@
+html, body {
+    background-color: #fff;
+    width: 100%;
+}
+
+html { overflow: hidden; height: 100%; }
+body { overflow: auto; height: 100%; }
+
+h1 {
+    font-size: 45px;
+    font-weight: 100;
+    font-family: "Open Sans";
+
+    @media screen and (max-width: 700px) {
+        font-size: 20px!important;
+        line-height: 25px!important;
+            width: 95%;
+    }
+}
+
+strong {
+    font-weight: 800;
+}
+
+.indicate {
+    height: 3px;
+    background-color: #009DFF;
+    width: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.page {
+    padding-right: 15px;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    bottom: 20px;
+    overflow: hidden;
+    margin: auto;
+}
+
+section.container {
+    position: absolute;
+    padding-top: 200px;
+    height: 100%;
+    width: 100%;
+}
+
+.items {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.btn {
+   -webkit-transition: background-color 0.3s ease;
+   -moz-transition: background-color 0.3s ease;
+   transition: background-color 0.3s ease;
+   background-color: #009dff ;
+   border: 1px solid transparent;
+   border-radius: 50px;
+   color: #fff;
+   font: 16px "Open Sans";
+   font-weight: 100;
+   padding: 5px 40px;
+   text-decoration: none;
+}
+.btn:hover,
+.btn:active {
+   -webkit-transition: background-color 0.3s ease;
+   -moz-transition: background-color 0.3s ease;
+   transition: background-color 0.3s ease;
+   background-color: #008dff ;
+}
+
+.stage {
+    .inner-stage {
+        &.zoomStart {
+            transform: scale(.1);
+            opacity: .4;
+
+            -webkit-animation: zoomStart .5s ease forwards 1s;
+            animation: zoomStart .5s ease forwards 1s;
+        }
+        &.zoom {
+            -webkit-animation: innerstageZoom 2s ease forwards;
+            animation: innerstageZoom 2s ease forwards;
+        }
+
+        &.zoomed {
+            transform: scale(1.5);
+        }
+    }
+}
+
+@keyframes zoomStart {
+    from {
+        opacity: .4;
+        transform: scale(.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(0.6);
+    }
+}
+@keyframes innerstageZoom {
+    from {
+        transform: scale(0.6);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+
+// &.ng-leave      { animation: scaleUp .5s both ease-in; }
+// &.ng-enter      { animation:scaleUp 0.5s both ease-in; }
+// &.ng-leave      { transform-origin: 50% 50%; animation: rotateOutNewspaper .5s both ease-in; }
+// &.ng-enter      { animation:slideInUp 0.5s both ease-in; }

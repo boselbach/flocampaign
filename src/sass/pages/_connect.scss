@@ -1,0 +1,66 @@
+.connect {
+    background-color: #F0F3F5;
+    // transform: scale(1);
+
+    #cc3 {
+        -webkit-animation: connectFill .5s ease-in-out forwards;
+        animation: connectFill .5s ease-in-out forwards;
+
+        @keyframes connectFill {
+            to {
+                fill: #11d66d;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 60px;
+        font-weight: 100;
+        font-family: "Open Sans";
+        position: absolute;
+        left:0;
+        right:0;
+        margin: auto;
+        top: 25%;
+        z-index: 1500;
+        -webkit-animation: connectHeadline 1.5s ease-in-out forwards;
+        animation: connectHeadline 1.5s ease-in-out forwards;
+
+        @keyframes connectHeadline {
+            0% {
+                opacity: 0;
+                transform: scale(.4);
+            }
+            50% {
+                opacity: .5;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(1);
+            }
+        }
+    }
+    .stage {
+        transform: scale(1);
+            // transform: translateY(400px);
+
+            .test {
+                right: 5%;
+                //    top: 90%;
+                   width: 35%;
+                   z-index: 2000;
+                   position: absolute;
+
+            }
+    }
+
+
+    .computer {
+        .incoming {
+            display: block;
+        }
+    }
+
+    &.ng-leave           {z-index: 9999; }
+}

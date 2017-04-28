@@ -1,0 +1,39 @@
+.intro {
+    background-color: #2A2C44;
+    color: #fff;
+
+    h1 {
+        opacity: 0;
+        font-size: 60px;
+        line-height: 65px;
+        font-weight: 100;
+        font-family: "Open Sans";
+        position: absolute;
+        left:0;
+        right:0;
+        margin: auto;
+        top: 45%;
+
+        &.animate {
+            -webkit-animation: introHeadline 2s ease forwards;
+            animation: introHeadline 2s ease forwards;
+        }
+    }
+
+    &.ng-leave { animation: slideOutLeft 0.5s both ease-in; z-index: 9999; }
+}
+
+@keyframes introHeadline {
+    0% {
+        opacity: 0;
+        transform: scale(.4);
+    }
+    50% {
+        opacity: .09;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(1);
+    }
+}

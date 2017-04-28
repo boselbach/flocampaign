@@ -1,0 +1,23 @@
+<article>
+    <h1><strong>Attract</strong> more fans.</h1>
+    <div class="stage" style="height: 100%; width: 100%;">
+        <div class="inner-stage zoom">
+            <person
+                type="{{ person.type }}"
+                class="{{ person.class }}"
+                delay="{{ person.delay }}"
+                x="{{ person.x }}"
+                z-index="{{ person.zIndex }}"
+                size="{{ person.size }}",
+                animate="{{ person.animate }}"
+                group="{{ person.group }}"
+                ng-repeat="person in persons"
+            />
+
+            <div class="zoom" circles></div>
+        </div>
+
+        <computer class="static"></computer>
+
+    </div>
+</article>

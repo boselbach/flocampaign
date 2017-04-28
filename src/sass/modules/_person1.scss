@@ -1,0 +1,209 @@
+.person {
+    position: absolute;
+    z-index: 1000;
+
+    img {
+        width: 85%;
+    }
+
+    &.hide {
+        display: none;
+    }
+
+    &.topDown {
+        top: 40%;
+
+        &.animate {
+            -webkit-animation: topDown 3s;
+            animation: topDown 3s;
+        }
+
+        @keyframes topDown {
+            0% {top: 0%}
+            100% {top: 40%}
+        }
+    }
+
+    &.startMid {
+        top: 40%;
+        -webkit-filter: blur(0);
+        -moz-filter: blur(0);
+        -o-filter: blur(0);
+        -ms-filter: blur(0);
+        filter: blur(0);
+
+
+        &.animate {
+            -webkit-animation: topDown2 .5s;
+            animation: topDown2 .5s;
+        }
+
+        @keyframes topDown2 {
+            0% {top: 0%}
+            0% {
+                -webkit-filter: blur(20px);
+                -moz-filter: blur(20px);
+                -o-filter: blur(20px);
+                -ms-filter: blur(20px);
+                filter: blur(20px);
+            }
+            100% {
+                -webkit-filter: blur(0);
+                -moz-filter: blur(0);
+                -o-filter: blur(0);
+                -ms-filter: blur(0);
+                filter: blur(0);
+            }
+            100% {top: 40%}
+        }
+    }
+
+    &.start0 {
+        left: 0;
+    }
+    &.start5 {
+        left: 5%;
+    }
+    &.start10 {
+        left: 10%;
+    }
+    &.start20 {
+        left: 20%;
+    }
+    &.start30 {
+        left: 30%;
+    }
+    &.start40 {
+        left: 40%;
+    }
+
+    &.startMidSil {
+        top: 35%;
+
+        &.animate {
+            -webkit-animation: topDown3 3s;
+            animation: topDown3 3s;
+        }
+
+        @keyframes topDown3 {
+            0% {top: 0%}
+            100% {top: 35%}
+        }
+    }
+    &.startMidSil1 {
+        top: 45%;
+
+        &.animate {
+            -webkit-animation: topDown4 3s;
+            animation: topDown4 3s;
+        }
+
+        @keyframes topDown4 {
+            0% {top: 0%}
+            100% {top: 45%}
+        }
+    }
+    &.startMidSil2 {
+        top: 40%;
+
+        &.animate {
+            -webkit-animation: topDown5 3s;
+            animation: topDown5 3s;
+        }
+
+        @keyframes topDown5 {
+            0% {top: 0%}
+            100% {top: 40%}
+        }
+    }
+
+    &.lll {
+        -webkit-animation: hinge 3s;
+        animation: hinge 3s;
+
+        @keyframes hinge {
+            0% {
+                animation-timing-function: ease-in-out;
+                transform: rotate(-120deg);
+                transform-origin: top left;
+            }
+
+            25% {
+                animation-timing-function: ease-in-out;
+                transform: rotate(70deg);
+                transform-origin: top left;
+            }
+
+            50% {
+                animation-timing-function: ease-in-out;
+                transform: rotate(-120deg);
+                transform-origin: top left;
+            }
+
+            100% {
+                animation-timing-function: ease-in;
+                transform: rotate(0deg) translateY(200%);
+            }
+        }
+    }
+
+
+
+    &.zoom {
+        -webkit-animation: zoom 8s forwards;
+        animation: zoom 8s forwards;
+
+        width: 18%;
+        top: 60%;
+
+        -webkit-filter: blur(10px);
+        -moz-filter: blur(10px);
+        -o-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(10px);
+
+        @keyframes zoom {
+            0% {width: 2%}
+            0% {top: 40%}
+            0% {
+                -webkit-filter: blur(0);
+                -moz-filter: blur(0);
+                -o-filter: blur(0);
+                -ms-filter: blur(0);
+                filter: blur(0);
+            }
+            100% {width: 18%}
+            100% {top: 60%}
+            100% {
+                -webkit-filter: blur(10px);
+                -moz-filter: blur(10px);
+                -o-filter: blur(10px);
+                -ms-filter: blur(10px);
+                filter: blur(10px);
+            }
+        }
+    }
+
+    &.zoomed {
+        -webkit-filter: blur(10px);
+        -moz-filter: blur(10px);
+        -o-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(10px);
+
+        width: 18%;
+        top: 60%;
+    }
+}
+
+@keyframes moveForward {
+    0% {bottom:45%}
+    100% {bottom: 10%;}
+
+}
+
+@keyframes imageZoom {
+    0% {width:85%}
+    100% {width: 100%;}
+
+}

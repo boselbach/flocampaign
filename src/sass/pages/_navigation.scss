@@ -1,0 +1,85 @@
+nav.main {
+    position: fixed;
+    z-index: 10000;
+    bottom: 5px;
+    margin: 0 auto;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 80%;
+
+
+    ul {
+        background-color: #fff;
+        border:1px solid #dadde0;
+        display: flex;
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+
+        li {
+            border-left: 1px solid #dadde0;
+            height: 30px;
+            flex: 1;
+
+            &:first-child {
+                border-left: none;
+            }
+
+            .progress-circle {
+                position: absolute;
+                top: 0;
+                z-index: 2000;
+                display: none;
+            }
+
+            a {
+                color: grey;
+                line-height: 20px;
+                font: 12px "Open Sans";
+                text-decoration: none;
+                text-transform: capitalize;
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding-top: 5px;
+
+                @media screen and (max-width: 700px) {
+                    font: 10px "Open Sans";
+                    line-height: 12px;
+                }
+            }
+
+            &.active {
+                position: relative;
+
+                .progress-circle {
+                    display: block;
+
+                    @media screen and (max-width: 700px) {
+                        display: none;
+                    }
+                }
+
+                a {
+                    color: #fff;
+                    background-color: #0093ff;
+                    position: absolute;
+                    top: -5px;
+                    padding: 10px 5px 0px 5px;
+                    margin-left: -5px;
+
+                }
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        width: 100%;
+        bottom: 10px;
+    }
+}

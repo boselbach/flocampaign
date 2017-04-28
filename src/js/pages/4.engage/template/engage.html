@@ -1,0 +1,25 @@
+<article>
+    <sky></sky>
+    <h1><strong>Engage</strong> more meaningfully.</h1>
+    <div class="stage">
+        <div class="inner-stage zoomed">
+            <person
+                type="{{ person.type }}"
+                class="{{ person.class }}"
+                delay="{{ person.delay }}"
+                x="{{ person.x }}"
+                z-index="{{ person.zIndex }}"
+                size="{{ person.size }}",
+                animate="{{ person.animate }}"
+                group="{{ 'person-'+$index }}"
+                action="{{ person.action }}"
+                ng-repeat="person in persons"
+            />
+
+            <div circles></div>
+        </div>
+
+        <computer class="static"></computer>
+    </div>
+    <div class="media-container"></div>
+</article>

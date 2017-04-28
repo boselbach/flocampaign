@@ -1,0 +1,89 @@
+.sky {
+    position: absolute;
+    width: 100%;
+    top: -20%;
+    left: 0;
+    max-width: 986px;
+
+    .sky1 {
+        position: absolute;
+        top: 0%;
+        left: -5%;
+        z-index: 1000;
+        opacity: 0.7;
+        width: 90%;
+
+        -webkit-animation: sky-layer1 6s infinite;
+        animation: sky-layer1 6s infinite;
+    }
+
+    .sky2 {
+        position: absolute;
+        top: 7%;
+        left: -3%;
+        z-index: 3;
+        opacity: .5;
+
+        -webkit-animation: sky-layer2 5s infinite;
+        animation: sky-layer2 5s infinite;
+    }
+
+    .sky3 {
+        position: absolute;
+        top: 10%;
+        left: -1%;
+        z-index: 2;
+        width: 80%;
+        opacity: .5;
+
+        -webkit-animation: sky-layer3 6s infinite;
+        animation: sky-layer3 6s infinite;
+    }
+
+
+    @media screen and (max-width: 700px) {
+        top: 0;
+    }
+}
+
+
+@keyframes sky-in {
+    0% {top: -400px}
+    100% {top: -200px}
+}
+@keyframes sky {
+    0% {left: 0}
+    50% {left: 10%}
+    100% {left: 30%}
+    100% {left: 0}
+}
+
+@keyframes sky-layer1 {
+    0% {top: 0%}
+    50% {top: -2%}
+    100% {top: 0%}
+
+    0% {left: -5%}
+    50% {left: 1%}
+    100% {left: -5%}
+}
+
+@keyframes sky-layer2 {
+    0% {top: 7%}
+    50% {top: 9%}
+    100% {top: 7%}
+
+    0% {left: -3%}
+    50% {left: 2%}
+    100% {left: -3%}
+}
+
+@keyframes sky-layer3 {
+    0% {top: 0%}
+    50% {top: 9%}
+    100% {top: 7%}
+
+    0% {left: -1%}
+    50% {left: 3%}
+    100% {left: -1%}
+}
